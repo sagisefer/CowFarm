@@ -42,16 +42,7 @@ public class Cow {
     @Override
     public String toString() {
         String cowInfo;
-        String generationIdent = "";
-        for (int i = 0; i <= generation; i++) {
-            generationIdent = generationIdent + "\t";
-        }
-
-        if (this.getMother() != null) {
-            cowInfo = generationIdent + this.getNickName() + " [" + this.getMother().getNickName() + "]";
-        } else {
-            cowInfo = generationIdent + this.getNickName();
-        }
+        cowInfo = this.getNickName() + (this.getMother() != null?" [" + this.getMother().getNickName() + "]":"");
         return cowInfo;
     }
 }
